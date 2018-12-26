@@ -1,0 +1,282 @@
+@import url(../../node_modules/eva-icons/style/eva-icons.css);
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,800");
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  background: #f5f5f5; }
+
+hr {
+  border: none;
+  height: 0.1rem;
+  background: rgba(188, 159, 73, 0.1); }
+
+img {
+  max-width: 100%; }
+
+.eva {
+  vertical-align: bottom; }
+
+.clearfix {
+  display: block;
+  clear: both; }
+  .clearfix::after {
+    content: '';
+    display: block;
+    clear: both; }
+
+h1, .h1-like,
+h2, .h2-like,
+h3, .h3-like,
+h4, .h4-like,
+h5, .h5-like,
+h6, .h6-like {
+  margin-top: .8em;
+  margin-bottom: 1em;
+  letter-spacing: .05em;
+  font-family: "Ubuntu Mono", monospace;
+  display: inline-block; }
+  h1:first-child, .h1-like:first-child,
+  h2:first-child, .h2-like:first-child,
+  h3:first-child, .h3-like:first-child,
+  h4:first-child, .h4-like:first-child,
+  h5:first-child, .h5-like:first-child,
+  h6:first-child, .h6-like:first-child {
+    margin-top: 0; }
+  h1::after, .h1-like::after,
+  h2::after, .h2-like::after,
+  h3::after, .h3-like::after,
+  h4::after, .h4-like::after,
+  h5::after, .h5-like::after,
+  h6::after, .h6-like::after {
+    content: '';
+    display: block;
+    margin-top: 1rem;
+    height: 0.2rem;
+    width: 100%;
+    background: #bc9f49; }
+
+.container {
+  width: 110rem;
+  max-width: calc(100% - 2rem);
+  margin-left: auto;
+  margin-right: auto; }
+
+.main-header {
+  height: 6rem;
+  background: #2f3535;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0.5rem 2rem rgba(47, 53, 53, 0.05);
+  display: flex;
+  align-items: center; }
+
+.brand,
+.brand img {
+  height: 100%; }
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  font-family: "Ubuntu Mono", monospace; }
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 1rem;
+    position: relative;
+    letter-spacing: 0.1rem; }
+  .main-nav a.active {
+    color: #bc9f49; }
+    .main-nav a.active::after {
+      content: "";
+      display: block;
+      height: 0.2rem;
+      background: #bc9f49;
+      width: 2rem;
+      position: absolute;
+      bottom: 0rem;
+      left: 1rem; }
+
+.lang-switcher {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  border-radius: 0.3rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.1); }
+  .lang-switcher .switcher {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0; }
+
+.switcher span,
+.lang-switcher {
+  cursor: pointer;
+  background: #2f3535;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.main-search [type="search"] {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 1rem 0;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Ubuntu Mono", monospace; }
+
+/**
+* Tags
+*/
+.tags-list {
+  display: flex;
+  color: rgba(47, 53, 53, 0.5);
+  font-size: 1.1rem;
+  font-family: "Ubuntu Mono", monospace; }
+  .tags-list i {
+    margin-right: 1rem; }
+
+/**
+* Buttons
+*/
+.btn {
+  display: inline-block;
+  -webkit-appearance: none;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  box-shadow: 0 0.2rem 2rem rgba(47, 53, 53, 0.05);
+  text-decoration: none;
+  color: #2f3535;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700; }
+
+.btn--primary {
+  background: linear-gradient(#475050, #2f3535);
+  color: white; }
+
+.btn--gold {
+  background: linear-gradient(#cab36e, #bc9f49); }
+
+.btn--small {
+  padding: 0.5rem 1rem;
+  font-size: 80%; }
+
+.btn--large {
+  padding: 1.5rem 3rem;
+  font-size: 120%; }
+
+.btn--block {
+  display: block;
+  width: 100%; }
+
+/**
+* Vignettes / Cards
+*/
+.w-vignette {
+  margin: 0;
+  padding: 2rem;
+  background: #2f3535;
+  color: white;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.5rem 2rem rgba(188, 159, 73, 0.5);
+  border-bottom: 0.2rem solid #bc9f49; }
+  .w-vignette figcaption {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Ubuntu Mono", monospace; }
+    .w-vignette figcaption::before {
+      content: '';
+      margin: 1rem 0;
+      display: block;
+      width: 2rem;
+      height: 0.1rem;
+      background: #bc9f49; }
+
+/**
+* Wiki
+*/
+.wiki {
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem 0; }
+
+.wiki-nav {
+  width: 20rem;
+  border-right: 0.1rem solid rgba(188, 159, 73, 0.5);
+  margin-right: 2rem;
+  position: sticky;
+  top: calc(6rem + 2rem); }
+  .wiki-nav a:not(.btn) {
+    padding: .4rem 0;
+    text-decoration: none;
+    color: rgba(47, 53, 53, 0.8);
+    position: relative;
+    display: flex;
+    align-items: center; }
+    .wiki-nav a:not(.btn)::before {
+      content: '';
+      width: 1rem;
+      height: 0.1rem;
+      background: rgba(188, 159, 73, 0.5);
+      display: inline-block;
+      margin-right: 1rem; }
+  .wiki-nav a.active {
+    color: #bc9f49; }
+    .wiki-nav a.active::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      border-style: solid;
+      border-width: .4rem .5rem .4rem 0;
+      border-color: transparent rgba(188, 159, 73, 0.5) transparent transparent; }
+  .wiki-nav ul {
+    list-style-type: none;
+    padding-left: 1rem; }
+
+.wiki-nav__section, .wiki-nav__subsection {
+  font-family: "Ubuntu Mono", monospace; }
+
+.wiki-nav__section {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+  color: #2f3535; }
+
+.wiki-nav__subsection {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  color: #bc9f49; }
+
+.wiki-content {
+  width: calc(100% - 22rem);
+  padding: 2rem;
+  background: white;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.5rem 0.5rem rgba(47, 53, 53, 0.05); }
+
+.wiki-content__footer {
+  clear: both;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 0.1rem solid rgba(188, 159, 73, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }

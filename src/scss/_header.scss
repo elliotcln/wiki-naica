@@ -1,0 +1,95 @@
+$main-header--height: 6rem;
+
+.main-header {
+  height: $main-header--height;
+  background: $c-primary;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 .5rem 2rem rgba($c-primary, .05);
+
+  display: flex;
+  //   justify-content: space-between;
+  align-items: center;
+}
+
+// .brand img {
+//     height: calc(#{$main-header--height} / 1.5);
+// }
+
+.brand,
+.brand img {
+  //   max-width: 100%;
+  height: 100%;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  font-family: $f-mono;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 1rem;
+    position: relative;
+    letter-spacing: 0.1rem;
+  }
+
+  a.active {
+    color: $c-gold;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0.2rem;
+      background: $c-gold;
+      width: 2rem;
+
+      position: absolute;
+      bottom: 0rem;
+      left: 1rem;
+    }
+  }
+}
+
+.lang-switcher {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  border-radius: $radius-sm;
+  border: 0.1rem solid rgba(white, 0.1);
+
+  .switcher {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+
+.switcher span,
+.lang-switcher {
+  cursor: pointer;
+  background: $c-primary;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-search {
+  [type="search"] {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 1rem 0;
+    border-bottom: 0.1rem solid rgba(white, 0.2);
+    color: rgba(white, 0.8);
+    font-family: "Ubuntu Mono", monospace;
+  }
+}

@@ -1,0 +1,28 @@
+/**
+* Vignettes / Cards
+*/
+
+.w-vignette {
+    margin: 0;
+    padding: 2rem;
+    background: $c-primary;
+    color: white;
+    border-radius: $radius-sm;
+    box-shadow: 0 .5rem 2rem rgba($c-gold, .5);
+    border-bottom: .2rem solid $c-gold;
+
+    figcaption {
+        font-size: 1.1rem;
+        color: rgba(white, .5);
+        font-family: $f-mono;
+
+        &::before {
+            content: '';
+            margin: 1rem 0;
+            display: block;
+            width: 2rem;
+            height: 0.1rem;
+            background: $c-gold;
+        }
+    }
+}

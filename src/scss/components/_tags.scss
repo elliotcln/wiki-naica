@@ -1,0 +1,14 @@
+/**
+* Tags
+*/
+
+.tags-list {
+    display: flex;
+    color: rgba($c-primary, .5);
+    font-size: 1.1rem;
+    font-family: $f-mono;
+
+    i {
+        margin-right: 1rem;
+    }
+}

@@ -1,0 +1,26 @@
+h1, .h1-like,
+h2, .h2-like,
+h3, .h3-like,
+h4, .h4-like,
+h5, .h5-like,
+h6, .h6-like {
+    margin-top: .8em;
+    margin-bottom: 1em;
+    letter-spacing: .05em;
+    font-family: $f-mono;
+    display: inline-block;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        margin-top: 1rem;
+        height: 0.2rem;
+        // width: 2rem;
+        width: 100%;
+        background: $c-gold;
+    }
+}
